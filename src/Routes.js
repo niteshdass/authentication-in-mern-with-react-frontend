@@ -1,19 +1,17 @@
 import React from 'react'
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
-import Home from './core/Home'
-import Signin from './user/Signin'
-import Signup from './user/Signup'
+
+import Back from './user/Back'
+import User from './user/User'
 import 'dotenv'
-import PrivateRoute from './auth.js/PrivateRoute'
-import UserDashboard from './user/UserDashboard'
+ 
 const Routes = () => {
       return (
             <BrowserRouter>
                   <Switch>
-                        <Route path="/" exact component={Home} />
-                        <Route path="/signin" exact component={Signin} />
-                        <Route path="/signup" exact component={Signup} />
-                        <PrivateRoute path="/dashboard" exact component={UserDashboard}/>
+                        <Route path="/" exact component={Back} />
+                        <Route path="/user" exact component={User} />
+                       
                   </Switch>
             </BrowserRouter>
       )
